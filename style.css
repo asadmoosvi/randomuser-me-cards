@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'PT Sans', sans-serif;
+}
+
+img {
+  object-fit: cover;
+  max-width: 100%;
+}
+.container {
+  max-width: 1024px;
+  margin: auto;
+  padding: 2rem;
+}
+.main-heading {
+  font-size: 2.4rem;
+  text-align: center;
+  color: #00adff;
+}
+
+.users {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+@media (min-width: 768px) {
+  .users {
+    flex-direction: row;
+  }
+}
+.user {
+  width: 200px;
+  display: flex;
+  gap: 0.5em;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem;
+  border-top: 4px solid #00adff;
+  border-radius: 5px;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  transition: all 0.3s;
+  background-color: white;
+  animation: animate-user 1000ms ease-in-out forwards;
+}
+@keyframes animate-user {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+.user > * {
+  transition: inherit;
+}
+
+.user__image {
+  border-radius: 50%;
+  width: 128px;
+  height: 128px;
+  overflow: hidden;
+}
+
+.user__location {
+  color: #8297a1;
+}
+
+.user__name {
+  font-size: 1.6em;
+  color: #00adff;
+}
+
+.user__email {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+.user__email:hover {
+  color: #8297a1;
+}
+
+#add-user {
+  outline: none;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: #00adff;
+  color: white;
+  padding: 0.5rem 1rem;
+  font-size: 1.6rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.1s;
+}
+#add-user:hover {
+  background-color: #0094E6;
+}
+#add-user:active {
+  background-color: #007ACC;
+}
